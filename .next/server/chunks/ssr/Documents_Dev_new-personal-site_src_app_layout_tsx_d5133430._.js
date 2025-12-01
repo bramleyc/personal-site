@@ -1,0 +1,3 @@
+module.exports=[94197,a=>{"use strict";var b=a.i(78196);function c({children:a}){return(0,b.jsx)("html",{lang:"en",className:"scroll-smooth",children:(0,b.jsx)("body",{className:"min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-800 text-slate-100 antialiased",children:a})})}a.s(["default",()=>c,"metadata",0,{title:"Chris Bramley • Principal Test Engineer & Engineering Leader",description:"Strategic quality leadership, GenAI in testing, regulatory delivery, developer experience, and DORA-driven engineering maturity."}])}];
+
+//# sourceMappingURL=Documents_Dev_new-personal-site_src_app_layout_tsx_d5133430._.js.map
