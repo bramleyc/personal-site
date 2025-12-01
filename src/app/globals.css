@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card-hover {
+  transition: border-color .15s, box-shadow .15s;
+}
+img[alt$="logo"] {
+  max-height: 1.25rem;
+  vertical-align: middle;
+}
