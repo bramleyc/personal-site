@@ -1,4 +1,7 @@
 # Chris Bramley – Personal Site
+[![CI](https://github.com/bramleyc/personal-site/actions/workflows/ci-and-deploy.yml/badge.svg?branch=main)](https://github.com/bramleyc/personal-site/actions/workflows/ci-and-deploy.yml)
+
+
 Personal profile built with Next.js and Tailwind CSS to showcase experience, featured projects, skills, and a long-form quality engineering Q&A. The site exports to static HTML so it can be hosted on any static host (GitHub Pages, Vercel static, S3, etc.). In reality, it is hosted on AWS on S3 behind a CloudFlare distribution, using Route53 for DNS management and can be viewed at https://www.chrisbramley.com.
 
 ## Stack
