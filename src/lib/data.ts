@@ -127,7 +127,7 @@ export const projects: Project[] = [
   {
     name: "Automation Challenge Platform",
     blurb:
-      "Hands-on backend and frontend automation challenges (Playwright, RestAssured, Pact) used for onboarding, upskilling and hiring. Includes failing tests, mutation coverage angles, and quality scoring.",
+      "Hands-on backend and frontend automation challenges (RestAssured) used for onboarding, upskilling and hiring. Includes failing tests to understand a candidate's approach to identifying test failues, using logs, and coding.",
     link: "https://github.com/bramleyc/api-test", 
     tags: ["RestAssured",  "Automated Testing"]
   }
