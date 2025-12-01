@@ -36,7 +36,7 @@ Personal profile built with Next.js and Tailwind CSS to showcase experience, fea
    ```
    The static build is written to the `out/` directory when `output: "export"` is set in `next.config.js`; These are then uploaded to AWS CLI with the `aws s3 sync ./out s3://<remote bucket name>` command. Use `npm run start` to preview the production build locally.
 
-> **Node.js**: Next.js 16 requires Node 18.18+ (or Node 20+). Use an active LTS release.
+> **Node.js**: Next.js 16 requires Node 18.18+ (or Node 20+). Use an active LTS release - at time of writing this is `v25.1`.
 
 ## Content & Customisation
 - `src/lib/data.ts` – hero copy, experience timeline, featured projects, skills, and certifications.
@@ -61,6 +61,9 @@ public/          # Static assets (logos, favicons)
 - `npm run serve:static` serves the `out/` directory locally at `http://127.0.0.1:4173`—Playwright uses this automatically.
 
 For a full breakdown of tooling, coverage, expectations of contributors and future improvements see [quality.md](./quality.md).
+
+## Deployment
+Github Actions have been configured in the repository to run the tests, create the build if the tests pass, and upload it to s3 after every commit is pushed. The steps are in `.github/workflows/ci-and-deploy.yml`.
 
 ## License
 MIT Licence.
