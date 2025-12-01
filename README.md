@@ -34,7 +34,7 @@ Personal profile built with Next.js and Tailwind CSS to showcase experience, fea
    ```bash
    npm run build
    ```
-   The static build is written to the `out/` directory when `output: "export"` is set in `next.config.js`; These are then uploaded to AWS CLI with the `aws s3 sync` command. Use `npm run start` to preview the production build locally.
+   The static build is written to the `out/` directory when `output: "export"` is set in `next.config.js`; These are then uploaded to AWS CLI with the `aws s3 sync ./out s3://<remote bucket name>` command. Use `npm run start` to preview the production build locally.
 
 > **Node.js**: Next.js 16 requires Node 18.18+ (or Node 20+). Use an active LTS release.
 
