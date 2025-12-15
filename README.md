@@ -29,8 +29,7 @@ Personal profile built with Next.js and Tailwind CSS to showcase experience, fea
 
 4. Run the automated test suites
    ```bash
-   npm run test:unit
-   npm run test:e2e 
+   npm run test
    ```
 
 5. Build for production (static export)
@@ -39,7 +38,7 @@ Personal profile built with Next.js and Tailwind CSS to showcase experience, fea
    ```
    The static build is written to the `out/` directory when `output: "export"` is set in `next.config.js`; These are then uploaded to AWS CLI with the `aws s3 sync ./out s3://<remote bucket name>` command. Use `npm run start` to preview the production build locally.
 
-> **Node.js**: Next.js 16 requires Node 18.18+ (or Node 20+). Use an active LTS release - at time of writing this is `v25.1`.
+> **Node.js**: Next.js 16 requires Node 18.18+. Use an active LTS release; Node 20+ is what this project is tested with.
 
 ## Content & Customisation
 - `src/lib/data.ts` – hero copy, experience timeline, featured projects, skills, and certifications.
@@ -51,22 +50,25 @@ Personal profile built with Next.js and Tailwind CSS to showcase experience, fea
 ## Project Structure (top-level)
 ```
 src/
-  app/           # App Router routes
-  components/    # Reusable layout + UI components
-  lib/           # Underlying data to decouple content from the UI components
-public/          # Static assets (logos, favicons)
+  app/             # App Router routes, metadata, global styles, and page tests in __tests__/
+  components/      # Reusable layout + UI components (Header, Footer, Navigation, ContactCard, etc.)
+  lib/             # Content data (hero copy, experience timeline, projects, Q&A entries)
+public/            # Static assets (logos, favicons referenced in src/lib/data.ts)
+playwright/        # Playwright smoke/end-to-end specs (npm run test:e2e)
+test/              # Jest setup and shared test utilities
+out/               # Static export output from npm run build
 ```
 
 ## Testing & Quality
 - `npm run test:unit` runs Jest + React Testing Library component, page, and data integrity checks.
-- `npm run test:e2e` builds the static export and executes Playwright smoke scenarios (requires Node 20.9+).
-- `npm run test` runs both the unit tests and Playwrite user journey tests.
-- `npm run serve:static` serves the `out/` directory locally at `http://127.0.0.1:4173`—Playwright uses this automatically.
+- `npm run test:e2e` builds the static export and executes Playwright smoke scenarios (Node 20+ recommended).
+- `npm run test` runs both the unit tests and Playwright user journey tests.
+- `npm run serve:static` serves the `out/` directory locally at `http://127.0.0.1:4173`. Playwright uses this automatically.
 
 For a full breakdown of tooling, coverage, expectations of contributors and future improvements see [quality.md](./quality.md).
 
 ## Deployment
-Github Actions have been configured in the repository to run the tests, create the build if the tests pass, and upload it to s3 after every commit is pushed. The steps are in `.github/workflows/ci-and-deploy.yml`.
+Github Actions have been configured in the repository to run the tests, create the static build if the tests pass, and upload it to s3 after every commit is pushed. The steps are in `.github/workflows/ci-and-deploy.yml`.
 
 ## License
 MIT Licence.
