@@ -9,7 +9,7 @@ export default function Navigation() {
       <Link href="/#experience" className="hover:text-white" data-testid="header-experience">
         Experience
       </Link>
-      <Link href="/qa" className="hover:text-white" data-testid="header-qa">
+      <Link href="qa.html" className="hover:text-white" data-testid="header-qa">
         Q&A
       </Link>
       <Link href="/#projects" className="hover:text-white" data-testid="header-projects">
