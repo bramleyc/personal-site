@@ -22,7 +22,7 @@ describe("Home Page", () => {
       screen.getByRole("link", { name: "Read full ChatGPT Q&A" })
     ).toHaveAttribute(
       "href",
-      "/qa"
+      "qa.html"
     )
 
     experience.forEach((job) => {
