@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-m mx-auto flex flex-col gap-2">
 
         <div className="flex flex-wrap items-center justify-center gap-4 font-mono text-xs text-slate-500">
-          <Navigation/>
+          <Navigation testIdPrefix="footer"/>
         </div>
 
         <div className="text-slate-600">

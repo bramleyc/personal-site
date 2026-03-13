@@ -19,10 +19,20 @@
 - **Pages**
   - `src/app/page.tsx`: verifies hero headline, CTA link targets, experience/project/skills counts against data sources.
   - `src/app/qa/page.tsx`: confirms every Q&A entry and tag renders (with `react-markdown` mocked for deterministic markup).
+  - `src/app/blog/page.tsx`: confirms heading renders, article count matches mock posts, each post title and tag renders, sidebar links use correct anchors, and prev/next navigation is absent at the list boundaries. Uses mock posts (see Mocking Approach below) to decouple the test from real content.
 - **Data**
   - `src/lib/data.ts` & `src/lib/qa.ts`: validates non-empty strings, duplicate detection for skills/tags, and ensures experience roles plus any optional bullet/tag/link fields contain meaningful values.
+  - `src/lib/posts.ts`: validates slug URL-safety (`/^[a-z0-9-]+$/`), date format (`YYYY-MM-DD`), non-empty required fields, and uniqueness of slugs and per-post tags.
 - **End-to-end (Playwright)**
   - `home.spec.ts`: static export smoke covering hero rendering, Q&A navigation, console error checks, and mobile menu behaviour (open/close + anchor navigation) on both desktop and mobile viewports.
+  - `blog.spec.ts`: navigation smoke (split by viewport — desktop uses `header-blog` link, mobile uses the hamburger menu, each skipped on the other project), verifies article rendering, checks sidebar link anchor format (desktop only — skipped on mobile-chrome because the sidebar uses `hidden md:block`), verifies prev/next links when 2+ posts exist or asserts they are absent for a single post (handles the real-world case where only one post is published), and confirms the blog link appears in the mobile menu.
+
+## Mocking Approach
+Page-level tests mock their dependencies so the test is isolated from real content and file system state:
+
+- **`react-markdown`** is mocked in all page tests to return its children as plain text, avoiding the need to assert on rendered HTML structure and keeping tests readable.
+- **`fs`** is mocked in `blog/page.test.tsx` (returning a fixed string) because the blog page reads markdown files at build time via `fs.readFileSync`. This prevents the test from touching the real file system.
+- **`@/lib/posts`** is mocked in `blog/page.test.tsx` with a fixed two-post array (`first-post`, `second-post`). This decouples the page tests from the real content in `posts.ts` — adding, removing, or renaming posts will not break the page tests. Note: because Jest hoists `jest.mock` calls above all variable declarations, the mock factory must inline its data rather than reference an outer variable; a separate `mockPosts` constant (with the same values) is defined below the mock for use in test assertions.
 
 ## Commands
 - `npm run test:unit` – executes all Jest suites (components, pages, data).
@@ -33,5 +43,4 @@
 
 ## Next Steps
 - Extend component tests with accessibility assertions (e.g., `jest-axe`) for landmark structure.
-- Add GitHub Action workflow or other CI automation to run `test:unit` and `test:e2e` on push. 
 - Add Mutation testing

@@ -67,6 +67,17 @@ function MobileNavigation() {
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Dev$2f$new$2d$personal$2d$site$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: "blog.html",
+                            className: "hover:text-white",
+                            "data-testid": "mobile-menu-blog",
+                            onClick: ()=>setOpen(false),
+                            children: "Blog"
+                        }, void 0, false, {
+                            fileName: "[project]/Documents/Dev/new-personal-site/src/components/MobileNavigation.tsx",
+                            lineNumber: 31,
+                            columnNumber: 13
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Dev$2f$new$2d$personal$2d$site$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                             href: "#about",
                             className: "hover:text-white",
                             "data-testid": "mobile-menu-about",
@@ -74,7 +85,7 @@ function MobileNavigation() {
                             children: "About"
                         }, void 0, false, {
                             fileName: "[project]/Documents/Dev/new-personal-site/src/components/MobileNavigation.tsx",
-                            lineNumber: 31,
+                            lineNumber: 32,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Dev$2f$new$2d$personal$2d$site$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -85,7 +96,7 @@ function MobileNavigation() {
                             children: "Experience"
                         }, void 0, false, {
                             fileName: "[project]/Documents/Dev/new-personal-site/src/components/MobileNavigation.tsx",
-                            lineNumber: 32,
+                            lineNumber: 33,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Dev$2f$new$2d$personal$2d$site$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -96,7 +107,7 @@ function MobileNavigation() {
                             children: "Projects"
                         }, void 0, false, {
                             fileName: "[project]/Documents/Dev/new-personal-site/src/components/MobileNavigation.tsx",
-                            lineNumber: 33,
+                            lineNumber: 34,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Dev$2f$new$2d$personal$2d$site$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -107,7 +118,7 @@ function MobileNavigation() {
                             children: "Skills"
                         }, void 0, false, {
                             fileName: "[project]/Documents/Dev/new-personal-site/src/components/MobileNavigation.tsx",
-                            lineNumber: 34,
+                            lineNumber: 35,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Dev$2f$new$2d$personal$2d$site$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -118,7 +129,7 @@ function MobileNavigation() {
                             children: "Contact"
                         }, void 0, false, {
                             fileName: "[project]/Documents/Dev/new-personal-site/src/components/MobileNavigation.tsx",
-                            lineNumber: 35,
+                            lineNumber: 36,
                             columnNumber: 13
                         }, this)
                     ]

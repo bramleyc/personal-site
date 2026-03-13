@@ -13,7 +13,7 @@ describe("Header", () => {
     const nav = screen.getByRole("navigation")
     const navLinks = within(nav).getAllByRole("link")
     const labels = navLinks.map((link) => link.textContent)
-    expect(labels).toEqual(["About", "Experience", "Q&A", "Projects", "Skills", "Contact"])
+    expect(labels).toEqual(["About", "Experience", "Q&A", "Blog", "Projects", "Skills", "Contact"])
 
     expect(
       screen.getByRole("button", { name: /toggle navigation/i })

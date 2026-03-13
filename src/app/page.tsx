@@ -42,8 +42,14 @@ export default function Page() {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 text-sm font-semibold">
               <a
-                href="qa.html"
+                href="blog.html"
                 className="inline-block rounded-2xl shadow-lg shadow-emerald-500/20 bg-emerald-500 hover:bg-emerald-400 text-slate-900 px-4 py-2 text-center"
+              >
+                Visit my blog
+              </a>
+              <a
+                href="qa.html"
+                className="inline-block rounded-2xl border border-slate-600 bg-slate-800/60 text-slate-200 hover:bg-slate-700 hover:text-white px-4 py-2 text-center"
               >
                 Read full ChatGPT Q&amp;A
               </a>

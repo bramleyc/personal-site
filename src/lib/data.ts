@@ -8,7 +8,7 @@ export const hero = {
     "My focus is bringing Testing and Quality into the AI era, by fundamentally changing the way quality outcomes are achieved at scale.",
     "I specialise in aligning testing strategy with business outcomes, scaling high-quality engineering practices, and driving compliance and reliability at pace. I mentor senior quality and engineering leaders, shape large-scale quality transformations, and embed pragmatic, AI and automated testing practices across organisations.",
     "I'm also deeply passionate about the Developer Experience and how to make it possible for any engineer to do the right thing, in the easiest way.",
-    "I've created this site to showcase my work, link of to some projects I've worked on (including this site), and maybe start a blog one day.",
+    "I've created this site to showcase my work, link of to some projects I've worked on (including this site), and publish my thoughts on the future to a blog.",
     "If you'd like to know more about me, an overview of my CV is below, but I've also had a deep and meaningful chat with... ChatGPT. Just to try something different."
   ],
   badges: [

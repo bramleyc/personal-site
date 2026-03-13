@@ -28,6 +28,7 @@ export default function MobileNavigation() {
         >
           <div className="flex flex-col gap-3 pt-3">
             <a href="qa.html" className="hover:text-white" data-testid="mobile-menu-qna" onClick={() => setOpen(false)}>ChatGPT Q&A</a>
+            <a href="blog.html" className="hover:text-white" data-testid="mobile-menu-blog" onClick={() => setOpen(false)}>Blog</a>
             <a href="#about" className="hover:text-white" data-testid="mobile-menu-about" onClick={() => setOpen(false)}>About</a>
             <a href="#experience" className="hover:text-white" data-testid="mobile-menu-experience" onClick={() => setOpen(false)}>Experience</a>
             <a href="#projects" className="hover:text-white" data-testid="mobile-menu-projects" onClick={() => setOpen(false)}>Projects</a>

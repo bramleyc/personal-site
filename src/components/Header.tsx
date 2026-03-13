@@ -17,7 +17,7 @@ export default function Header() {
           </div>
         </div>
 
-        <Navigation />
+        <Navigation testIdPrefix="header" />
 
         <MobileNavigation />
       </div>
