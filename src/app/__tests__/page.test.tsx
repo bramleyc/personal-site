@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen, within } from "@testing-library/react"
 import Page from "@/app/page"
 import {
   hero,
@@ -29,16 +29,19 @@ describe("Home Page", () => {
       expect(screen.getAllByText(job.role).length).toBeGreaterThan(0)
     })
 
+    const projectsList = screen.getByTestId("projects-list")
     projects.forEach((project) => {
-      expect(screen.getByText(project.name)).toBeInTheDocument()
+      expect(within(projectsList).getByText(project.name)).toBeInTheDocument()
     })
 
+    const skillsList = screen.getByTestId("skills-list")
     skills.forEach((skill) => {
-      expect(screen.getByText(skill)).toBeInTheDocument()
+      expect(within(skillsList).getByText(skill)).toBeInTheDocument()
     })
 
+    const certificationsList = screen.getByTestId("certifications-list")
     certifications.forEach((cert) => {
-      expect(screen.getByText(cert.name)).toBeInTheDocument()
+      expect(within(certificationsList).getByText(cert.name)).toBeInTheDocument()
     })
 
     const contactEmail = screen.getByRole("link", { name: "Email me" })

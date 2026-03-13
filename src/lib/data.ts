@@ -5,7 +5,9 @@ export const hero = {
   title: "Principal Test Engineer & Engineering Leader",
   paragraphs: [
     "I'm an experienced technical leader in both management and individual contributor roles, with a record of delivering measurable outcomes through strategic quality initiatives, cross-functional collaboration, and engineering maturity uplift.",
-    "I specialise in aligning testing strategy with business outcomes, scaling high-quality engineering practices, and driving compliance and reliability at pace. I mentor senior quality and engineering leaders, shape large-scale quality transformations, and embed pragmatic, automated testing practices across organisations.",
+    "My focus is bringing Testing and Quality into the AI era, by fundamentally changing the way quality outcomes are achieved at scale.",
+    "I specialise in aligning testing strategy with business outcomes, scaling high-quality engineering practices, and driving compliance and reliability at pace. I mentor senior quality and engineering leaders, shape large-scale quality transformations, and embed pragmatic, AI and automated testing practices across organisations.",
+    "I'm also deeply passionate about the Developer Experience and how to make it possible for any engineer to do the right thing, in the easiest way.",
     "I've created this site to showcase my work, link of to some projects I've worked on (including this site), and maybe start a blog one day.",
     "If you'd like to know more about me, an overview of my CV is below, but I've also had a deep and meaningful chat with... ChatGPT. Just to try something different."
   ],
@@ -27,17 +29,16 @@ export const experience: Job[] = [
     company: "Booking.com",
     companyLogo: "/logos/bookingcom.svg",
     companyAlt: "Booking.com",
-    role: "Principal Test Engineer",
+    role: "Principal Test Engineer (Enterprise Quality Strategy & Governance)",
     period: "Feb 2021 – Present",
     bullets: [
-      "Part of the central Enterprise Architecture team at Booking.com, responsible for leading on improving the developer experience and quality practices across the business, and giving technical leadership across the software engineering lifecycle.",
-      "Co-authored and implemented company-wide Quality Strategy, reducing Change Failure Rate by >55%.",
+      "Senior quality leader within Booking.com’s Central Technology Enterprise Architecture / Engineering Enablement organisation, providing strategic direction, governance, and enablement for testing and quality across global product and platform teams.",
+      "Co-authored and implemented a company-wide Quality Strategy, setting standards for testability, automation, release readiness, and risk-based validation across hundreds of engineers.",
+      "Led adoption of GenAI-assisted testing, including test case and test data generation, through guidelines, prompt frameworks, and hands-on workshops.",
       "Led Developer Experience guiding principal across all business units, with >80% adoption and >10% improvement in engineering maturity.",
-      "Delivered resources such as a comprehensive Quality knowledge base, Sonarqube quality profiles and templating, and refreshed evaluation metrics based on DORA.",
-      "Key collaborator on the company-wide Quality Strategy and leader of its rollout workstream, including GenAI guidance for test case and test data generation, SonarQube quality profiles, and refreshed DORA-based metrics.",
-      "Led DMA compliance testing and rollout: daily release plans, company-wide fire drills, production monitoring and fast remediation to deliver on-time against EU regulatory deadlines.",
-      "Drove adoption of unit and contract testing via a train-the-trainer model: unit test adoption 29% → 93%, contract testing 29% → 50%, elevating code releasability from E → B in 9 months.",
-      "Mentored Principal / Senior Test Engineers and Engineering Managers in Test; built cross-business-unit collaboration and career progression pathways."
+      "Defined and delivered shared quality assets including a central testing knowledge base, SonarQube quality and releasability profiles, and DORA-aligned evaluation models used across business units.",
+      "Led quality strategy, testing governance, and release oversight for the EU Digital Markets Act (DMA) rollout, including coordinated fire drills, production monitoring, and staged rollouts.",
+      "Designed and delivered scalable training initiatives to uplift testing and engineering capability across multiple business units."
     ]
   },
   {
@@ -47,10 +48,11 @@ export const experience: Job[] = [
     role: "Senior Engineering Manager – Test",
     period: "Feb 2019 – Feb 2021",
     bullets: [
-      "Led Engineering Managers in Test across Manchester, London, and Amsterdam (organisation size ~40 including indirect reports).",
-      "Built working practices between UK-based Transport and Netherlands-based Accommodation units for the first time, improving cross-functional integration.",
-      "Created learning paths, competencies and training materials for automation, web, and native app quality practices.",
-      "Scaled frontend and backend automation frameworks around AWS-native microservices and event-driven systems (CloudWatch, Kinesis, DynamoDB)."
+      "Led a globally distributed organisation of ~40 direct and indirect reports across Manchester, London, and Amsterdam.",
+      "Defined and rolled out company-wide Test Engineering career frameworks, hiring standards, job specifications, and interview playbooks.",
+      "Integrated quality and testing approaches across different business units.",
+      "Owned automation strategy and delivery across frontend and backend systems in a large-scale microservices, event-driven AWS environment.",
+      "Owned tooling budget (circa £100k) and vendor relationships, including joint enablement and training initiatives."
     ]
   },
   {
@@ -130,19 +132,27 @@ export const projects: Project[] = [
       "Hands-on backend and frontend automation challenges (RestAssured) used for onboarding, upskilling and hiring. Includes failing tests to understand a candidate's approach to identifying test failues, using logs, and coding.",
     link: "https://github.com/bramleyc/api-test", 
     tags: ["RestAssured",  "Automated Testing"]
+  },
+  {
+    name: "Job notifier",
+    blurb:
+      "Small project using AWS Lambda and SES to send email alerts when jobs are posted",
+    link: "https://github.com/bramleyc/job-notifier", 
+    tags: ["AWS",  "Lambda"]
   }
 ]
 
 export const skills = [
   "Software Testing & Quality",
+  "GenAI in Test Engineering",
+  "GenAI Agents and Skills",
   "Engineering Leadership",
   "Strategic Programme Leadership",
   "Engineering Tech Strategy",
   "Automation Framework Design (Playwright, TestCafe, RestAssured)",
   "Contract Testing (Pact)",
   "DORA Metrics & Engineering Maturity",
-  "GenAI in Test Engineering",
-  "AWS"
+  "AWS",
 ]
 
 export const certifications = [

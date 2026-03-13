@@ -235,7 +235,7 @@ export default function Page() {
             title="Featured Work"
           />
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div data-testid="projects-list" className="grid md:grid-cols-2 gap-6">
             {projects.map((proj, idx) => (
               <article
                 key={idx}
@@ -307,7 +307,7 @@ export default function Page() {
                 colourClass="bg-indigo-400 shadow-[0_0_10px_#818cf8]"
                 title="Skills & Focus Areas"
               />
-              <ul className="flex flex-wrap gap-2 text-[13px] leading-relaxed">
+              <ul data-testid="skills-list" className="flex flex-wrap gap-2 text-[13px] leading-relaxed">
                 {skills.map((skill, i) => (
                   <li
                     key={i}
@@ -324,7 +324,7 @@ export default function Page() {
                 colourClass="bg-fuchsia-400 shadow-[0_0_10px_#f0abfc]"
                 title="Qualifications"
               />
-              <ul className="space-y-3 text-slate-300">
+              <ul data-testid="certifications-list" className="space-y-3 text-slate-300">
                 {certifications.map((c, i) => (
                   <li key={i} className="flex flex-col">
                     <span className="text-slate-200">{c.name}</span>
