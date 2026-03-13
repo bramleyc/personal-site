@@ -2,6 +2,7 @@ import fs from "fs"
 import path from "path"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
+import BlogPostList from "@/components/BlogPostList"
 import { posts } from "@/lib/posts"
 import ReactMarkdown from "react-markdown"
 
@@ -54,21 +55,7 @@ export default function BlogPage() {
               <h2 className="text-xs uppercase tracking-widest text-emerald-300/60 font-mono mb-3">
                 Posts
               </h2>
-              <nav className="space-y-1" aria-label="Blog post list">
-                {postsWithContent.map((post) => (
-                  <a
-                    key={post.slug}
-                    href={`#${post.slug}`}
-                    data-testid={`sidebar-post-${post.slug}`}
-                    className="block text-sm text-slate-300 hover:text-white leading-tight py-1.5 pl-3 border-l-2 border-transparent hover:border-emerald-400 transition-colors"
-                  >
-                    {post.title}
-                    <span className="block text-xs text-slate-500 mt-0.5">
-                      {formatDate(post.date)}
-                    </span>
-                  </a>
-                ))}
-              </nav>
+              <BlogPostList posts={postsWithContent} />
             </div>
           </aside>
 

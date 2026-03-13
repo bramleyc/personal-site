@@ -1,6 +1,7 @@
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import ContactCard from "@/components/ContactCard"
+import BlogPostList from "@/components/BlogPostList"
 import { SectionHeading } from "@/components/SectionHeading"
 import {
   hero,
@@ -9,6 +10,7 @@ import {
   skills,
   certifications
 } from "@/lib/data"
+import { posts } from "@/lib/posts"
 import { Key } from "react"
 
 export default function Page() {
@@ -173,6 +175,13 @@ export default function Page() {
                   </span>
                 )
               })}
+            </div>
+
+            <div className="bg-slate-800/60 border border-slate-700/60 rounded-2xl shadow-xl shadow-black/60 p-4">
+              <h2 className="text-xs uppercase tracking-widest text-emerald-300/60 font-mono mb-3">
+                Latest Posts
+              </h2>
+              <BlogPostList posts={posts} basePath="blog.html" showExcerpt />
             </div>
           </aside>
         </section>
