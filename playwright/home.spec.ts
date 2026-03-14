@@ -1,30 +1,93 @@
 import { test, expect } from "@playwright/test"
 
-test("navigates from home to QA without console errors", async ({ page }) => {
+// ─── Home → QA ───────────────────────────────────────────────────────────────
+
+test("navigates from home to QA via desktop nav", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile-chrome", "Desktop nav hidden on mobile")
+
   const consoleErrors: string[] = []
-  page.on("console", (message) => {
-    if (message.type() === "error") {
-      consoleErrors.push(message.text())
-    }
-  })
+  page.on("console", (msg) => { if (msg.type() === "error") consoleErrors.push(msg.text()) })
 
   await page.goto("/")
-  await expect(
-    page.getByRole("heading", {
-      name: "Principal Test Engineer & Engineering Leader"
-    })
-  ).toBeVisible()
-
-  await page.getByRole("link", { name: "Read full ChatGPT Q&A" }).click()
-  await expect(page).toHaveURL(/\/qa$/)
-  await expect(
-    page.getByRole("heading", {
-      name: /Q&A/
-    })
-  ).toBeVisible()
-
+  await page.locator("header").getByTestId("header-qa").click()
+  await expect(page).toHaveURL(/\/qa/)
+  await expect(page.getByRole("heading", { name: /Q&A/ })).toBeVisible()
   expect(consoleErrors).toEqual([])
 })
+
+test("navigates from home to QA via mobile menu", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "mobile-chrome", "Mobile menu test — desktop uses header nav")
+
+  const consoleErrors: string[] = []
+  page.on("console", (msg) => { if (msg.type() === "error") consoleErrors.push(msg.text()) })
+
+  await page.goto("/")
+  await page.getByTestId("mobile-menu-toggle").click()
+  await page.getByTestId("mobile-menu-qna").click()
+  await expect(page).toHaveURL(/\/qa/)
+  await expect(page.getByRole("heading", { name: /Q&A/ })).toBeVisible()
+  expect(consoleErrors).toEqual([])
+})
+
+// ─── Blog → Home ─────────────────────────────────────────────────────────────
+
+test("navigates from blog back to home via desktop nav", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile-chrome", "Desktop nav hidden on mobile")
+
+  const consoleErrors: string[] = []
+  page.on("console", (msg) => { if (msg.type() === "error") consoleErrors.push(msg.text()) })
+
+  await page.goto("/blog")
+  await page.locator("header").getByTestId("header-about").click()
+  await expect(page).toHaveURL(/\/#about$/)
+  await expect(page.getByRole("heading", { name: /Principal Test Engineer/ })).toBeVisible()
+  expect(consoleErrors).toEqual([])
+})
+
+test("navigates from blog back to home via mobile menu", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "mobile-chrome", "Mobile menu test — desktop uses header nav")
+
+  const consoleErrors: string[] = []
+  page.on("console", (msg) => { if (msg.type() === "error") consoleErrors.push(msg.text()) })
+
+  await page.goto("/blog")
+  await page.getByTestId("mobile-menu-toggle").click()
+  await page.getByTestId("mobile-menu-about").click()
+  await expect(page).toHaveURL(/\/#about$/)
+  await expect(page.getByRole("heading", { name: /Principal Test Engineer/ })).toBeVisible()
+  expect(consoleErrors).toEqual([])
+})
+
+// ─── QA → Home ───────────────────────────────────────────────────────────────
+
+test("navigates from QA back to home via desktop nav", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === "mobile-chrome", "Desktop nav hidden on mobile")
+
+  const consoleErrors: string[] = []
+  page.on("console", (msg) => { if (msg.type() === "error") consoleErrors.push(msg.text()) })
+
+  await page.goto("/qa")
+  await page.locator("header").getByTestId("header-about").click()
+  await expect(page).toHaveURL(/\/#about$/)
+  await expect(page.getByRole("heading", { name: /Principal Test Engineer/ })).toBeVisible()
+  expect(consoleErrors).toEqual([])
+})
+
+test("navigates from QA back to home via mobile menu", async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== "mobile-chrome", "Mobile menu test — desktop uses header nav")
+
+  const consoleErrors: string[] = []
+  page.on("console", (msg) => { if (msg.type() === "error") consoleErrors.push(msg.text()) })
+
+  await page.goto("/qa")
+  await page.getByTestId("mobile-menu-toggle").click()
+  await page.getByTestId("mobile-menu-about").click()
+  await expect(page).toHaveURL(/\/#about$/)
+  await expect(page.getByRole("heading", { name: /Principal Test Engineer/ })).toBeVisible()
+  expect(consoleErrors).toEqual([])
+})
+
+// ─── Existing ─────────────────────────────────────────────────────────────────
 
 test("mobile navigation toggles open and closed", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 })
