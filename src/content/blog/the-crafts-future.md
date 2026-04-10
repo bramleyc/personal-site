@@ -1,4 +1,4 @@
-# The Craft Is Not the Tests
+## Introduction
 
 So my last post talked about how I see the lifecycle and therefore approach to software testing changing - stuff goes into an AI blob and spits out something at the other side, so quality needs to be on the input and output of the blob. I still don't think the blob analogy works entirely but it's what I'm rolling with for now.
 
