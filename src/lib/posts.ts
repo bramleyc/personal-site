@@ -7,14 +7,14 @@ export interface Post {
 }
 
 export const posts: Post[] = [
-  /**{
+  {
     slug: "the-crafts-future",
     title: "The Craft Is Not the Tests",
-    date: "2026-03-30",
+    date: "2026-04-10",
     excerpt:
       "What does it mean to be a test engineer in 2026? After fifteen years in the craft, I think the question deserves a fresh answer — one that has nothing to do with job titles.",
-    tags: ["quality", "AI"]
-  },**/
+    tags: ["quality", "AI", "craft"]
+  },
   {
     slug: "who-are-we-building-for",
     title: "Who are we building this for?",
