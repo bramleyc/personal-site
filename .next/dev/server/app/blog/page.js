@@ -2,7 +2,7 @@ var R=require("../../chunks/ssr/[turbopack]_runtime.js")("server/app/blog/page.j
 R.c("server/chunks/ssr/12cf4_next_dist_b0d92727._.js")
 R.c("server/chunks/ssr/12cf4_micromark-core-commonmark_dev_lib_c785d238._.js")
 R.c("server/chunks/ssr/12cf4_aa6088f2._.js")
-R.c("server/chunks/ssr/[root-of-the-server]__00246c62._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__0c8e02de._.js")
 R.c("server/chunks/ssr/12cf4_970a711a._.js")
 R.c("server/chunks/ssr/[externals]__e8a2741f._.js")
 R.c("server/chunks/ssr/Documents_Dev_new-personal-site_src_app_ef73e08a._.js")

@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Link from "next/link"
 
 export default function MobileNavigation() {
   const [open, setOpen] = useState(false)
@@ -27,8 +28,8 @@ export default function MobileNavigation() {
           className="md:hidden border-t border-slate-700/40 bg-slate-900/90 px-4 pb-4 text-sm text-slate-300"
         >
           <div className="flex flex-col gap-3 pt-3">
-            <a href="qa.html" className="hover:text-white" data-testid="mobile-menu-qna" onClick={() => setOpen(false)}>ChatGPT Q&A</a>
-            <a href="blog.html" className="hover:text-white" data-testid="mobile-menu-blog" onClick={() => setOpen(false)}>Blog</a>
+            <Link href="/qa" className="hover:text-white" data-testid="mobile-menu-qna" onClick={() => setOpen(false)}>ChatGPT Q&A</Link>
+            <Link href="/blog" className="hover:text-white" data-testid="mobile-menu-blog" onClick={() => setOpen(false)}>Blog</Link>
             <a href="/#about" className="hover:text-white" data-testid="mobile-menu-about" onClick={() => setOpen(false)}>About</a>
             <a href="/#experience" className="hover:text-white" data-testid="mobile-menu-experience" onClick={() => setOpen(false)}>Experience</a>
             <a href="/#projects" className="hover:text-white" data-testid="mobile-menu-projects" onClick={() => setOpen(false)}>Projects</a>

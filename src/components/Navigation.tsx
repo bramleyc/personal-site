@@ -16,10 +16,10 @@ export default function Navigation({ testIdPrefix }: NavigationProps) {
       <Link href="/#experience" className="hover:text-white" {...testId("experience")}>
         Experience
       </Link>
-      <Link href="qa.html" className="hover:text-white" {...testId("qa")}>
+      <Link href="/qa" className="hover:text-white" {...testId("qa")}>
         Q&A
       </Link>
-      <Link href="blog.html" className="hover:text-white" {...testId("blog")}>
+      <Link href="/blog" className="hover:text-white" {...testId("blog")}>
         Blog
       </Link>
       <Link href="/#projects" className="hover:text-white" {...testId("projects")}>
