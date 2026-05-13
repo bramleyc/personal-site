@@ -139,6 +139,13 @@ export const projects: Project[] = [
       "Small project using AWS Lambda and SES to send email alerts when jobs are posted",
     link: "https://github.com/bramleyc/job-notifier", 
     tags: ["AWS",  "Lambda"]
+  },
+  {
+    name: "Traffic push alerts",
+    blurb:
+      "Small project using AWS Lambda and EventBridge to send traffic alerts as push notifications based on schedule and/or Google calendar events",
+    link: "https://github.com/bramleyc/traffic-alert", 
+    tags: ["AWS",  "Lambda", "EventBridge"]
   }
 ]
 
