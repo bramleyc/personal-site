@@ -15,7 +15,7 @@ export default function QAPage() {
     <Header />
           
          
-      <main className="max-w-4xl mx-auto px-4 py-10 space-y-10">
+      <main className="max-w-5xl mx-auto px-4 py-10 space-y-10">
         <div className="space-y-3">
           <h1 className="text-3xl uppercase tracking-wide text-emerald-300/80 font-mono">
             Q&amp;A

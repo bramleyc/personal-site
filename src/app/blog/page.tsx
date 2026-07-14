@@ -37,7 +37,7 @@ export default function BlogPage() {
     <>
       <Header />
 
-      <main className="max-w-6xl mx-auto px-4 py-10">
+      <main className="max-w-5xl mx-auto px-4 py-10">
         <div className="space-y-3 mb-10">
           <h1 className="text-3xl uppercase tracking-wide text-emerald-300/80 font-mono">
             Blog

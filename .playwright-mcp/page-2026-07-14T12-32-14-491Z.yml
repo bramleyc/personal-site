@@ -1,0 +1,318 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e6]:
+        - generic [ref=e7]: Chris Bramley
+        - generic [ref=e8]: Principal Test Engineer & Engineering Leader
+      - navigation [ref=e9]:
+        - link "About" [ref=e10] [cursor=pointer]:
+          - /url: /#about
+        - link "Experience" [ref=e11] [cursor=pointer]:
+          - /url: /#experience
+        - link "Q&A" [ref=e12] [cursor=pointer]:
+          - /url: /qa/
+        - link "Blog" [ref=e13] [cursor=pointer]:
+          - /url: /blog/
+        - link "Projects" [ref=e14] [cursor=pointer]:
+          - /url: /#projects
+        - link "Skills" [ref=e15] [cursor=pointer]:
+          - /url: /#skills
+        - link "Contact" [ref=e16] [cursor=pointer]:
+          - /url: /#contact
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - heading "Chris Bramley" [level=1] [ref=e20]
+        - heading "Principal Test Engineer & Engineering Leader" [level=2] [ref=e21]
+        - paragraph [ref=e22]: I'm an experienced technical leader in both management and individual contributor roles, with a record of delivering measurable outcomes through strategic quality initiatives, cross-functional collaboration, and engineering maturity uplift.
+        - paragraph [ref=e23]: My focus is bringing Testing and Quality into the AI era, by fundamentally changing the way quality outcomes are achieved at scale.
+        - paragraph [ref=e24]: I specialise in aligning testing strategy with business outcomes, scaling high-quality engineering practices, and driving compliance and reliability at pace. I mentor senior quality and engineering leaders, shape large-scale quality transformations, and embed pragmatic, AI and automated testing practices across organisations.
+        - paragraph [ref=e25]: I'm also deeply passionate about the Developer Experience and how to make it possible for any engineer to do the right thing, in the easiest way.
+        - paragraph [ref=e26]: I've created this site to showcase my work, link of to some projects I've worked on (including this site), and publish my thoughts on the future to a blog.
+        - paragraph [ref=e27]: If you'd like to know more about me, an overview of my CV is below, but I've also had a deep and meaningful chat with... ChatGPT. Just to try something different.
+        - generic [ref=e28]:
+          - link "Visit my blog" [ref=e29] [cursor=pointer]:
+            - /url: /blog/
+          - link "Read full ChatGPT Q&A" [ref=e30] [cursor=pointer]:
+            - /url: /qa/
+          - link "View featured work" [ref=e31] [cursor=pointer]:
+            - /url: "#projects"
+          - link "Get in touch" [ref=e32] [cursor=pointer]:
+            - /url: "#contact"
+      - complementary [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: Manchester, UK
+          - link "bramley@gmail.com" [ref=e45] [cursor=pointer]:
+            - /url: mailto:bramley@gmail.com
+          - generic [ref=e49]:
+            - link "github.com/bramleyc" [ref=e50] [cursor=pointer]:
+              - /url: https://github.com/bramleyc
+            - generic [ref=e51]: Personal + training repos
+        - generic [ref=e52]:
+          - generic [ref=e53]: GenAI for Test Engineering
+          - generic [ref=e54]: Quality Engineering at Scale
+          - generic [ref=e55]: Developer Experience
+        - generic [ref=e56]:
+          - heading "Latest Posts" [level=2] [ref=e57]
+          - navigation "Blog post list" [ref=e58]:
+            - link "The Craft Is Not the Tests 10 April 2026 What does it mean to be a test engineer in 2026? After fifteen years in the craft, I think the question deserves a fresh answer — one that has nothing to do with job titles." [ref=e59] [cursor=pointer]:
+              - /url: /blog/#the-crafts-future
+              - text: The Craft Is Not the Tests
+              - generic [ref=e60]: 10 April 2026
+              - generic [ref=e61]: What does it mean to be a test engineer in 2026? After fifteen years in the craft, I think the question deserves a fresh answer — one that has nothing to do with job titles.
+            - link "Who are we building this for? 13 March 2026 If people aren't building the code, why are we building our tests as if they still are?" [ref=e62] [cursor=pointer]:
+              - /url: /blog/#who-are-we-building-for
+              - text: Who are we building this for?
+              - generic [ref=e63]: 13 March 2026
+              - generic [ref=e64]: If people aren't building the code, why are we building our tests as if they still are?
+    - generic [ref=e66]:
+      - heading "Experience" [level=2] [ref=e67]
+      - generic [ref=e70]:
+        - article [ref=e71]:
+          - generic [ref=e72]:
+            - generic [ref=e73]:
+              - img "Booking.com" [ref=e75]
+              - generic [ref=e76]: Principal Test Engineer (Enterprise Quality Strategy & Governance)
+            - generic [ref=e77]: Feb 2021 – Present
+          - list [ref=e78]:
+            - listitem [ref=e79]:
+              - generic [ref=e80]: •
+              - generic [ref=e81]: Senior quality leader within Booking.com’s Central Technology Enterprise Architecture / Engineering Enablement organisation, providing strategic direction, governance, and enablement for testing and quality across global product and platform teams.
+            - listitem [ref=e82]:
+              - generic [ref=e83]: •
+              - generic [ref=e84]: Co-authored and implemented a company-wide Quality Strategy, setting standards for testability, automation, release readiness, and risk-based validation across hundreds of engineers.
+            - listitem [ref=e85]:
+              - generic [ref=e86]: •
+              - generic [ref=e87]: Led adoption of GenAI-assisted testing, including test case and test data generation, through guidelines, prompt frameworks, and hands-on workshops.
+            - listitem [ref=e88]:
+              - generic [ref=e89]: •
+              - generic [ref=e90]: Led Developer Experience guiding principal across all business units, with >80% adoption and >10% improvement in engineering maturity.
+            - listitem [ref=e91]:
+              - generic [ref=e92]: •
+              - generic [ref=e93]: Defined and delivered shared quality assets including a central testing knowledge base, SonarQube quality and releasability profiles, and DORA-aligned evaluation models used across business units.
+            - listitem [ref=e94]:
+              - generic [ref=e95]: •
+              - generic [ref=e96]: Led quality strategy, testing governance, and release oversight for the EU Digital Markets Act (DMA) rollout, including coordinated fire drills, production monitoring, and staged rollouts.
+            - listitem [ref=e97]:
+              - generic [ref=e98]: •
+              - generic [ref=e99]: Designed and delivered scalable training initiatives to uplift testing and engineering capability across multiple business units.
+        - article [ref=e100]:
+          - generic [ref=e101]:
+            - generic [ref=e102]:
+              - img "Booking.com" [ref=e104]
+              - generic [ref=e105]: Senior Engineering Manager – Test
+            - generic [ref=e106]: Feb 2019 – Feb 2021
+          - list [ref=e107]:
+            - listitem [ref=e108]:
+              - generic [ref=e109]: •
+              - generic [ref=e110]: Led a globally distributed organisation of ~40 direct and indirect reports across Manchester, London, and Amsterdam.
+            - listitem [ref=e111]:
+              - generic [ref=e112]: •
+              - generic [ref=e113]: Defined and rolled out company-wide Test Engineering career frameworks, hiring standards, job specifications, and interview playbooks.
+            - listitem [ref=e114]:
+              - generic [ref=e115]: •
+              - generic [ref=e116]: Integrated quality and testing approaches across different business units.
+            - listitem [ref=e117]:
+              - generic [ref=e118]: •
+              - generic [ref=e119]: Owned automation strategy and delivery across frontend and backend systems in a large-scale microservices, event-driven AWS environment.
+            - listitem [ref=e120]:
+              - generic [ref=e121]: •
+              - generic [ref=e122]: Owned tooling budget (circa £100k) and vendor relationships, including joint enablement and training initiatives.
+        - article [ref=e123]:
+          - generic [ref=e124]:
+            - generic [ref=e125]:
+              - img "Booking.com" [ref=e127]
+              - generic [ref=e128]: Test Engineering Lead
+            - generic [ref=e129]: Sep 2017 – Feb 2019
+          - list [ref=e130]:
+            - listitem [ref=e131]:
+              - generic [ref=e132]: •
+              - generic [ref=e133]: "Built testing as a function in a startup-style environment: hiring, team structure, embedded testers, environments, release process."
+            - listitem [ref=e134]:
+              - generic [ref=e135]: •
+              - generic [ref=e136]: Introduced automation (Selenium/Java via BrowserStack, RestAssured API tests in Bamboo CI).
+            - listitem [ref=e137]:
+              - generic [ref=e138]: •
+              - generic [ref=e139]: Enabled an 11× increase in release frequency by pushing incremental delivery and quality-first practices.
+        - article [ref=e140]:
+          - generic [ref=e141]:
+            - generic [ref=e142]:
+              - img "BBC Design & Engineering" [ref=e144]
+              - generic [ref=e145]: Test Manager (TV & Radio – Mobile)
+            - generic [ref=e146]: Mar 2015 – Sep 2017
+          - list [ref=e147]:
+            - listitem [ref=e148]:
+              - generic [ref=e149]: •
+              - generic [ref=e150]: Led up to 25 engineers delivering BBC iPlayer and BBC iPlayer Radio on iOS / Android, including contractors and permanent staff.
+            - listitem [ref=e151]:
+              - generic [ref=e152]: •
+              - generic [ref=e153]: Owned Test Strategy, shortening mobile regression from two weeks to two days via risk-based coverage, exploratory testing and pairing.
+            - listitem [ref=e154]:
+              - generic [ref=e155]: •
+              - generic [ref=e156]: "Worked on BBC-wide initiatives: supplier selection, on-device automation, and Test Craftsmanship community."
+            - listitem [ref=e157]:
+              - generic [ref=e158]: •
+              - generic [ref=e159]: Actively involved in inclusive hiring and early-career schemes (Leonard Cheshire Change 100, Extend, Apprenticeships & Graduates).
+        - article [ref=e160]:
+          - generic [ref=e161]:
+            - generic [ref=e162]:
+              - img "BBC Design & Engineering" [ref=e164]
+              - generic [ref=e165]: Senior Test Engineer
+            - generic [ref=e166]: Apr 2014 – Feb 2015
+          - list [ref=e167]:
+            - listitem [ref=e168]:
+              - generic [ref=e169]: •
+              - generic [ref=e170]: Test Lead for BBC iPlayer mobile native applications on iOS and Android. Reorganised the existing team to fit into a lean, crew-based agile delivery model.
+            - listitem [ref=e171]:
+              - generic [ref=e172]: •
+              - generic [ref=e173]: In charge of planning and process improvement, including reducing the regression test spend from two weeks to two days by introducing test automation and the use of audience statistics to help drive a risk-based approach to device coverage.
+        - article [ref=e174]:
+          - generic [ref=e175]:
+            - generic [ref=e176]:
+              - generic [ref=e177]: BJSS
+              - generic [ref=e178]: Senior Test Engineer
+            - generic [ref=e179]: Jan 2014 - Apr 2014
+        - article [ref=e180]:
+          - generic [ref=e181]:
+            - generic [ref=e182]:
+              - generic [ref=e183]: Stagecoach
+              - generic [ref=e184]: Senior QA Engineer
+            - generic [ref=e185]: Jul 2013 - Dec 2013
+        - article [ref=e186]:
+          - generic [ref=e187]:
+            - generic [ref=e188]:
+              - generic [ref=e189]: Waters Corporation
+              - generic [ref=e190]: Software Test Team Leader
+            - generic [ref=e191]: Mar 2013 - Jul 2013
+        - article [ref=e192]:
+          - generic [ref=e193]:
+            - generic [ref=e194]:
+              - generic [ref=e195]: Waters Corporation
+              - generic [ref=e196]: Software Test Engineer
+            - generic [ref=e197]: Jan 2010 - Mar 2013
+        - article [ref=e198]:
+          - generic [ref=e199]:
+            - generic [ref=e200]:
+              - generic [ref=e201]: T-Mobile UK
+              - generic [ref=e202]: Test Analyst
+            - generic [ref=e203]: Sept 2007 - Jan 2010
+    - generic [ref=e204]:
+      - heading "Featured Work" [level=2] [ref=e205]
+      - generic [ref=e208]:
+        - article [ref=e209]:
+          - generic [ref=e210]:
+            - generic [ref=e211]:
+              - generic [ref=e212]:
+                - generic [ref=e213]: This site
+                - link "View" [ref=e214] [cursor=pointer]:
+                  - /url: https://github.com/bramleyc/personal-site
+              - paragraph [ref=e219]: I've added the code for this site to my public Github profile. I scaffolded it with OpenAI Codex, then did a fair bit of refactoring to make it more useable (eg adding tests, testids for testability, extracting navigation elements into components for reusability). Then set up AWS so it can run as a static site on S3 behind Cloudflare.
+            - generic [ref=e220]:
+              - generic [ref=e221]: GenAI
+              - generic [ref=e222]: TypeScript
+              - generic [ref=e223]: Playwright
+              - generic [ref=e224]: Automated Testing
+        - article [ref=e225]:
+          - generic [ref=e226]:
+            - generic [ref=e227]:
+              - generic [ref=e228]:
+                - generic [ref=e229]: Automation Challenge Platform
+                - link "View" [ref=e230] [cursor=pointer]:
+                  - /url: https://github.com/bramleyc/api-test
+              - paragraph [ref=e235]: Hands-on backend and frontend automation challenges (RestAssured) used for onboarding, upskilling and hiring. Includes failing tests to understand a candidate's approach to identifying test failues, using logs, and coding.
+            - generic [ref=e236]:
+              - generic [ref=e237]: RestAssured
+              - generic [ref=e238]: Automated Testing
+        - article [ref=e239]:
+          - generic [ref=e240]:
+            - generic [ref=e241]:
+              - generic [ref=e242]:
+                - generic [ref=e243]: Job notifier
+                - link "View" [ref=e244] [cursor=pointer]:
+                  - /url: https://github.com/bramleyc/job-notifier
+              - paragraph [ref=e249]: Small project using AWS Lambda and SES to send email alerts when jobs are posted
+            - generic [ref=e250]:
+              - generic [ref=e251]: AWS
+              - generic [ref=e252]: Lambda
+        - article [ref=e253]:
+          - generic [ref=e254]:
+            - generic [ref=e255]:
+              - generic [ref=e256]:
+                - generic [ref=e257]: Traffic push alerts
+                - link "View" [ref=e258] [cursor=pointer]:
+                  - /url: https://github.com/bramleyc/traffic-alert
+              - paragraph [ref=e263]: Small project using AWS Lambda and EventBridge to send traffic alerts as push notifications based on schedule and/or Google calendar events
+            - generic [ref=e264]:
+              - generic [ref=e265]: AWS
+              - generic [ref=e266]: Lambda
+              - generic [ref=e267]: EventBridge
+    - generic [ref=e269]:
+      - generic [ref=e270]:
+        - heading "Skills & Focus Areas" [level=2] [ref=e271]
+        - list [ref=e274]:
+          - listitem [ref=e275]: Software Testing & Quality
+          - listitem [ref=e276]: GenAI in Test Engineering
+          - listitem [ref=e277]: GenAI Agents and Skills
+          - listitem [ref=e278]: Engineering Leadership
+          - listitem [ref=e279]: Strategic Programme Leadership
+          - listitem [ref=e280]: Engineering Tech Strategy
+          - listitem [ref=e281]: Automation Framework Design (Playwright, TestCafe, RestAssured)
+          - listitem [ref=e282]: Contract Testing (Pact)
+          - listitem [ref=e283]: DORA Metrics & Engineering Maturity
+          - listitem [ref=e284]: AWS
+      - generic [ref=e285]:
+        - heading "Qualifications" [level=2] [ref=e286]
+        - list [ref=e289]:
+          - listitem [ref=e290]:
+            - generic [ref=e291]: Architecting on AWS
+            - generic [ref=e292]: "2021"
+          - listitem [ref=e293]:
+            - generic [ref=e294]: Developing on AWS
+            - generic [ref=e295]: "2021"
+          - listitem [ref=e296]:
+            - generic [ref=e297]: Association for Project Management - APMP (IPMA Level D, SCQF Level 7)
+            - generic [ref=e298]: "2012"
+          - listitem [ref=e299]:
+            - generic [ref=e300]: ISTQB Foundation Certificate in Software Testing
+            - generic [ref=e301]: "2007"
+          - listitem [ref=e302]:
+            - generic [ref=e303]: BSc (Hons) Computing Science, University of Newcastle upon Tyne
+            - generic [ref=e304]: "2007"
+    - generic [ref=e305]:
+      - heading "Contact" [level=2] [ref=e306]
+      - generic [ref=e309]:
+        - generic [ref=e310]:
+          - paragraph [ref=e311]: Open to senior quality / test engineering leadership roles (Director / Head of Quality / Head of Test / Principal Quality Engineering Architect) and strategic consulting around quality transformation, test strategy, or developer experience.
+          - paragraph [ref=e312]: For speaking, advisory, or collaboration queries, the best way to reach me is email.
+          - generic [ref=e313]:
+            - link "Email me" [ref=e314] [cursor=pointer]:
+              - /url: mailto:bramley@gmail.com
+            - link "View GitHub" [ref=e315] [cursor=pointer]:
+              - /url: https://github.com/bramleyc
+        - complementary [ref=e316]:
+          - generic [ref=e317]:
+            - generic [ref=e318]:
+              - generic [ref=e319]: Email
+              - generic [ref=e320]: bramley@gmail.com
+            - generic [ref=e321]:
+              - generic [ref=e322]: Location
+              - generic [ref=e323]: Manchester, UK
+  - contentinfo [ref=e324]:
+    - generic [ref=e325]:
+      - navigation [ref=e327]:
+        - link "About" [ref=e328] [cursor=pointer]:
+          - /url: /#about
+        - link "Experience" [ref=e329] [cursor=pointer]:
+          - /url: /#experience
+        - link "Q&A" [ref=e330] [cursor=pointer]:
+          - /url: /qa/
+        - link "Blog" [ref=e331] [cursor=pointer]:
+          - /url: /blog/
+        - link "Projects" [ref=e332] [cursor=pointer]:
+          - /url: /#projects
+        - link "Skills" [ref=e333] [cursor=pointer]:
+          - /url: /#skills
+        - link "Contact" [ref=e334] [cursor=pointer]:
+          - /url: /#contact
+      - generic [ref=e335]: © 2026 Chris Bramley
+  - alert [ref=e336]

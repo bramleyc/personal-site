@@ -1,0 +1,180 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - generic [ref=f2e6]:
+        - generic [ref=f2e7]: Chris Bramley
+        - generic [ref=f2e8]: Principal Test Engineer & Engineering Leader
+      - navigation [ref=f2e9]:
+        - link "About" [ref=f2e10] [cursor=pointer]:
+          - /url: /#about
+        - link "Experience" [ref=f2e11] [cursor=pointer]:
+          - /url: /#experience
+        - link "Q&A" [ref=f2e12] [cursor=pointer]:
+          - /url: /qa/
+        - link "Blog" [ref=f2e13] [cursor=pointer]:
+          - /url: /blog/
+        - link "Projects" [ref=f2e14] [cursor=pointer]:
+          - /url: /#projects
+        - link "Skills" [ref=f2e15] [cursor=pointer]:
+          - /url: /#skills
+        - link "Contact" [ref=f2e16] [cursor=pointer]:
+          - /url: /#contact
+  - main [ref=f2e17]:
+    - generic [ref=f2e18]:
+      - heading "Blog" [level=1] [ref=f2e19]
+      - paragraph [ref=f2e20]: Thoughts on quality, craft, and the ever-changing world of software engineering.
+    - generic [ref=f2e21]:
+      - complementary [ref=f2e22]:
+        - generic [ref=f2e23]:
+          - heading "Posts" [level=2] [ref=f2e24]
+          - navigation "Blog post list" [ref=f2e25]:
+            - link "The Craft Is Not the Tests 10 April 2026" [ref=f2e26] [cursor=pointer]:
+              - /url: "#the-crafts-future"
+              - text: The Craft Is Not the Tests
+              - generic [ref=f2e27]: 10 April 2026
+            - link "Who are we building this for? 13 March 2026" [ref=f2e28] [cursor=pointer]:
+              - /url: "#who-are-we-building-for"
+              - text: Who are we building this for?
+              - generic [ref=f2e29]: 13 March 2026
+      - generic [ref=f2e30]:
+        - article [ref=f2e31]:
+          - generic [ref=f2e32]:
+            - generic [ref=f2e33]:
+              - heading "The Craft Is Not the Tests" [level=1] [ref=f2e34]
+              - generic [ref=f2e35]:
+                - generic [ref=f2e36]: quality
+                - generic [ref=f2e37]: AI
+                - generic [ref=f2e38]: craft
+            - time [ref=f2e39]: 10 April 2026
+          - generic [ref=f2e40]:
+            - heading "Introduction" [level=2] [ref=f2e41]
+            - paragraph [ref=f2e42]: So my last post talked about how I see the lifecycle and therefore approach to software testing changing - stuff goes into an AI blob and spits out something at the other side, so quality needs to be on the input and output of the blob. I still don't think the blob analogy works entirely but it's what I'm rolling with for now.
+            - paragraph [ref=f2e43]: But - as someone whose career has been in various Test Engineer guises - I have to address the scary question... What does it mean for my role or for all our roles? Because I'm pretty sure writing speculative blog posts is not the answer for me. And I'm equally sure that writing test cases isn't the answer either.
+            - separator [ref=f2e44]
+            - heading "What AI is actually replacing" [level=2] [ref=f2e45]
+            - paragraph [ref=f2e46]:
+              - text: Let me be try to be clear about what I think changes. In a world where AI agents generate code and tests together from a specification, a significant portion of what a test engineer spent their time doing becomes automated. The unit test suite, the regression scenarios, the contract tests, the execution, the reporting, etc. These things happen inside the blob / build process without anyone writing a line of code. And even in my more stragetic role - I write (actually
+              - emphasis [ref=f2e47]: have
+              - text: written) an agent skill that encodes the quality strategy I've helped creat. Theoretically, over night every new commit can now follow the best guidance we can come up with. That should be a
+              - emphasis [ref=f2e48]: dream
+              - text: scenario but it makes me ask... OK, what next? Have I automated my role out of existence, along with every other test engineer?
+            - paragraph [ref=f2e49]:
+              - text: I remember when automation was going to make test engineers redundant. It did not, partly because the tools required engineering skills to use effectively, but mostly because the craft was always more than the manual test execution it was supposedly replacing. The tests were the output. The thinking that produced the tests - the edge case detection, the adversarial instinct, the understanding of how users actually behave versus how product owners and developers imagine they behave -
+              - emphasis [ref=f2e50]: that
+              - text: was the job. Critical thinking, systems knowledge, customer focus.
+            - paragraph [ref=f2e51]:
+              - text: GenAI feels different in scale and pace to anything that has come before, I will grant you that. There is no hurdle to automation now either, just type a few prompts. But I think the same principle applies. What is being automated is not the craft - it is the more operational
+              - emphasis [ref=f2e52]: output
+              - text: of the craft, the part that was always slightly disconnected from the deeper thinking and from the
+              - emphasis [ref=f2e53]: outcome
+              - text: of the craft - high quality, working software.
+            - paragraph [ref=f2e54]:
+              - text: I'm happy to be corrected but I genuinely think test engineers privately found that part a bit tedious anyway. Or maybe it's just me. Automating away the day to day has always been the goal, and AI doesn't change that. As a side note I spent about 30 minutes last night getting Claude to understand how I mark holidays in my Google calendar so that it could draft an email to the cattery with the correct dates for my two cats to stay while we were away. It would have been quicker to write the email myself - this time - but if I can hone that skill and automate it for every future holiday, I see that as a win. In my mind this comes from the same place - it's almost too
+              - emphasis [ref=f2e55]: easy
+              - text: for me to do, I want to do something more exciting, and I think that applies to test engineering. Let's do something cooler than writing tests.
+            - separator [ref=f2e56]
+            - heading "The skills that transfer" [level=2] [ref=f2e57]
+            - paragraph [ref=f2e58]: "Here is what I have seen, across a career that has taken me from waterfall organisations to fast-moving product companies: the test engineers who have the most impact are rarely the ones who write the most tests. They are the ones who can read a requirement and immediately see the things it does not say, that ask inconvenient questions early enough so answering them is still cheap, that can sit with a product manager and explain why a particular non-functional concern matters, and then define a measurable threshold that a pipeline can actually enforce. They are the ones that are passionate about the customer."
+            - paragraph [ref=f2e59]:
+              - emphasis [ref=f2e60]: None of that is going anywhere
+              - text: . If anything, in a model where AI builds what the specification describes, the ability to catch what the specification does not describe becomes super important. The specification is load-bearing in a way it has never been before. The quality effort that has the most leverage is the effort that goes in before anything is generated. Hey look, it's shift-left, but not as we know it.
+            - paragraph [ref=f2e61]: The adversarial instinct transfers too. Curiosity is something I've often probed for in interviews because it's a mark of a great test engineer - they approach systems with a particular kind of creative suspicion that is hard to replicate through automation, precisely because automation can only test for things someone thought to test for. The value of a human asking "but what if someone does this?" scales up rather than down when the implementation is generated at speed and volume. Those test engineers that will succeed in the new world are the ones that are burning through tokens figuring out how Claude et al can help them.
+            - paragraph [ref=f2e62]: And the ability to translate between technical and non-technical concerns - to move between a VP conversation about risk and a log file trying to track down a production issue, sometimes on the same afternoon - that is a blend of skills that does not reduce to any single specialism.
+            - separator [ref=f2e63]
+            - heading "The pivots that are genuinely necessary" [level=2] [ref=f2e64]
+            - paragraph [ref=f2e65]: I do not want to make this sound like everything carries over unchanged, because that is not quite right either. I think there is a core that remains, but a focus that shifts.
+            - paragraph [ref=f2e66]: "The thing that shifts most significantly is where the output of the quality engineering role sits. In a traditional model, the output is a test suite. In this model, the output is increasingly the rules and behaviours that govern the pipeline: what constitutes a breaking change to a contract? What conditions would trigger manual intervention? At what point do we roll back a deployment automatically, and based on what signal? These are design decisions, and they require a kind of systems thinking that goes beyond authoring test cases."
+            - paragraph [ref=f2e67]: There is also a meaningful shift from being a checkpoint to being an influence. In most organisations I have worked in, the QA function has some formal authority - a release can be blocked, a ticket sent back for rework. In a model where the pipeline governs deployment and humans come in by exception, that formal authority largely disappears. What replaces it is the ability to make the case upstream - to make product teams write better specifications, to make the criteria for deployment genuinely meaningful, to shape what quality means before the question of whether it has been achieved even arises.
+            - paragraph [ref=f2e68]: This is softer work and harder to demonstrate. Some people will find it more energising than what it replaces. Some will find it uncomfortable. Both are understandable.
+            - separator [ref=f2e69]
+            - heading "What I keep coming back to" [level=2] [ref=f2e70]
+            - paragraph [ref=f2e71]:
+              - text: "A few years ago at Booking I spent time creating a career framework for test engineers. Six core competencies, and only one of them was actually executing testing. The rest covered things like advocacy - how test engineers influence their peers and their organisations to care about quality - and testability - making the act of testing easier and cheaper by building systems that support it. The framework tried to say:"
+              - emphasis [ref=f2e72]: the craft is not the tests
+              - text: . The craft is everything that makes good software possible.
+            - paragraph [ref=f2e73]: I think about that framing a lot in the context of AI, because if the craft is the tests, we are in trouble. But if the craft is the adversarial thinking, the early intervention, the translation between what a system does and what it should do, the insistence on asking what could go wrong when everyone else is focused on shipping, then we are not in trouble. We are, arguably, in a more interesting position than we have ever been. We remove one competency - executing tests - and focus on the remaining five, all of which add value to the company and its engineers.
+            - paragraph [ref=f2e74]: The tests were always a means to an end; software that works, delivered safely, that does what it is supposed to do.
+            - paragraph [ref=f2e75]: That end has not changed but the means are shifting. The question is whether the profession updates its idea of itself quickly enough to stay relevant to the end.
+            - paragraph [ref=f2e76]: I think it can and will. I think the people who went into testing because they genuinely liked understanding how things worked - the build not break people - will find the pivot more natural than they expect. The instinct that led them here is the same instinct that is needed, it just needs pointing in a slightly different direction.
+            - paragraph [ref=f2e77]: And if the next generation of engineers sees quality as something worth aspiring to rather than something imposed on them from the side - something built in rather than bolted on - then maybe that is the real measure of whether we got this right.
+            - paragraph [ref=f2e78]: It's going to be a change, but I think we have the right skills and mindset to make it a success.
+          - link "Who are we building this for? →" [ref=f2e80] [cursor=pointer]:
+            - /url: "#who-are-we-building-for"
+        - article [ref=f2e81]:
+          - generic [ref=f2e82]:
+            - generic [ref=f2e83]:
+              - heading "Who are we building this for?" [level=1] [ref=f2e84]
+              - generic [ref=f2e85]:
+                - generic [ref=f2e86]: SDLC
+                - generic [ref=f2e87]: AI
+                - generic [ref=f2e88]: Specification testing
+            - time [ref=f2e89]: 13 March 2026
+          - generic [ref=f2e90]:
+            - heading "Introduction" [level=2] [ref=f2e91]
+            - paragraph [ref=f2e92]: I got into testing because I liked to understand how things worked, not to break them. I liked writing code, and still do, so I was keen to shed that cliche that followed the job title around. I wanted to understand the system, and use that understanding to stop things going wrong in the first place. Build not break.
+            - paragraph [ref=f2e93]: "That philosophy has carried through most of my career, but lately it has led me somewhere I did not quite expect: questioning whether the way we build and ship software - the whole workflow, the software development lifecycle, the process, the gates, the checks, and so on - is going to be relevant for much longer. Or whether we need a fundamental rethink."
+            - paragraph [ref=f2e94]: Of couse, it's AI that's brought this front and centre of my thinking in 2026.
+            - paragraph [ref=f2e95]:
+              - text: Because the SDLC was designed for
+              - emphasis [ref=f2e96]: us
+              - text: . People. Different roles, different points of input, different points of handoff, different points of view. I'm starting to reframe this thinking. Do I need to know the internals, or do I need to care about the business logic and customer experience? Without getting ahead of myself, will I even be able to
+              - emphasis [ref=f2e97]: understand
+              - text: the code if we shift away from it being human-optimised to it being AI-optimised? Well, let's see, but before I go off on a tangent, let's bring it back to what is actually happening here and now and what I think it means for the role or testing and quality in 2026.
+            - separator [ref=f2e98]
+            - heading "The whiteboard diagram" [level=2] [ref=f2e99]
+            - paragraph [ref=f2e100]: You have seen the diagram. Boxes in a row, arrows going left to right, occasional arrow going backwards labelled "defect found". Development, QA, UAT, Release. Sometimes there is a Staging box. Sometimes there are two arrows going backwards. Or maybe it's an infinity-dev-test-ops loop. It goes into a Google doc, or a Confluence page, or a slide deck, and six months later someone draws it again from scratch because nobody knew the original existed.
+            - paragraph [ref=f2e101]: That diagram describes a workflow designed around how humans work. We write code incrementally, so we need review points. We make mistakes we cannot see ourselves, so we need someone else to look. We hand work off between people - the business need, the product vision, the implementation detail, the customer experience - so we need a defined moment when something is "ready to test". The phases exist because without them, people lose track.
+            - paragraph [ref=f2e102]: "None of that is wrong exactly. It has made software meaningfully more reliable over the past few decades. But it is worth being clear about what it actually is: a set of compensations for human limitations or needs. We built the process around ourselves because we were the ones doing it."
+            - paragraph [ref=f2e103]: What happens, then, when we are not the ones doing it?
+            - separator [ref=f2e104]
+            - heading "The blob" [level=2] [ref=f2e105]
+            - paragraph [ref=f2e106]: When an AI agent takes a user story and generates code, tests, and a deployment plan as a single event, the phases do not really apply anymore. There is an input and an output, and a lot of things happen in between that do not pause at the places we built our checkpoints around. I have started thinking of this as the blob - not in a dismissive way, but as an honest description of what the process looks like in my mind. Traditionally you might call it a black box but that feels too rigid a description for AI. The walls aren't fixed. So, a blob it is. If it helps I picture Flubber when I think about it...
+            - paragraph [ref=f2e107]:
+              - text: "Either way, the blob is fast. It does not wait for a QA sign-off column in a sprint board. It does not need a handoff meeting. And it raises a question that I find genuinely interesting rather than alarming:"
+              - strong [ref=f2e108]: if people are not part of the workflow, why are we designing the workflow around people?
+            - paragraph [ref=f2e109]: There is a specific risk here that I think is easy to underestimate. If the AI generates both the code and the unit tests from the same specification, you have a system where the verification was produced by the same process as the thing being verified. That is fine if the specification is right. If the specification is ambiguous or wrong, the code and the tests may both be confidently, consistently wrong together, and you would not know until a user found it.
+            - paragraph [ref=f2e110]: This is not a new category of problem - we have always had to worry about testing the wrong thing - but the scale and the speed at which it can now happen is new. And our existing quality models were not really designed to catch it. We need to make sure we feed the blob well... or something like that.
+            - separator [ref=f2e111]
+            - heading "What was actually worth doing all along" [level=2] [ref=f2e112]
+            - paragraph [ref=f2e113]: "Something I have come to think over the years, something that I think holds up pretty well in this new context: testing alone does not improve quality. It sounds obvious saying (or writing) it. But what improves quality is building it in earlier. Shifting left, or preventing defects over detecting them, has always been about finding the point where intervention is cheapest and most effective."
+            - paragraph [ref=f2e114]: In an AI-assisted workflow, I think that point moves further left than most of us are used to. It moves to the specification. If the AI builds what you describe, then describing it poorly is the primary failure mode. The quality effort that has the most leverage is the effort that goes into catching ambiguity, contradiction, and missing requirements before anything is generated. That is not a new idea. It is just that the cost of getting it wrong has gone up considerably, because it will be the last chance we have to get it right.
+            - separator [ref=f2e115]
+            - heading "What might replace the phases" [level=2] [ref=f2e116]
+            - paragraph [ref=f2e117]: I want to be careful not to make this sound more than the stream of consciousness that it is. I have been in this industry long enough to be suspicious of anyone who has a complete answer to a question that is still forming. But there are some things that seem to make sense from the direction I am looking.
+            - paragraph [ref=f2e118]: Testing the output rather than the implementation starts to matter more. End to end user journeys, contract tests at service boundaries, non-functional checks for security and performance and accessibility - these test what the system does rather than how it does it. They survive a complete rewrite of the internals, which is relevant when the internals might be regenerated entirely at any moment.
+            - paragraph [ref=f2e119]: It also comes from experience - I had a conversation with a senior test engineer just this week who pointed out one of the logical fallacies we face. We write tests for what we expect to happen or some edge cases - ie the happy path stuff and some obvious boundary issues. But we also write the code for this, because it's what we test for or describe in our acceptance criteria. The failures we tend to see very often have nothing to do with what we expect to happen or what we expect to fail - it's infrastructure, dependencies, performance, race conditions, and so on.
+            - paragraph [ref=f2e120]: So it's not that these tests are worthless, but that production becomes a quality signal in a way that is hard to ignore. If deployment is autonomous and fast, detection and response need to be equally fast. Progressive rollout with automated rollback based on real outcome signals - conversion rates, error rates, latency - is not a nice-to-have. It is how you stay safe when you have removed the manual checkpoint at the door.
+            - paragraph [ref=f2e121]: And so the specification itself, the thing that feeds the blob, needs to be treated as a quality artefact. Something that is reviewed with a critical eye that often only test engineers have, challenged, and stress-tested before it becomes the input to an automated system that will do exactly what it says. Garbage in, garbage out.
+            - separator [ref=f2e122]
+            - heading "A genuinely open question" [level=2] [ref=f2e123]
+            - paragraph [ref=f2e124]:
+              - text: I keep coming back to something from Zen and the Art of Motorcycle Maintenance - I mentioned this in the Q&A thing on here - a book that sounds like it has nothing to do with software and then turns out to be entirely about it (and that I've been looking for reasons to shoe-horn in to software testing for a decade). At its heart it is asking what quality actually is, because it is not really measurable, and is often based on feeling and intuition. That resonated with me when I first read it and it keeps resonating now. It's not test coverage. It's what comes out at the end - and to be clear, that
+              - emphasis [ref=f2e125]: end
+              - text: can be both the user experience as well as the ongoing maintenance for the engineers.
+            - paragraph [ref=f2e126]:
+              - text: Because the question of what quality looks like in an AI-assisted world is not purely a process question. It is also a question about what we value, what we want to protect, and who ultimately bears responsibility when something goes wrong.
+              - emphasis [ref=f2e127]: Those
+              - text: are human questions that we can optimise for. The workflow can change substantially but at the end of the lifecycle, or process, or blob output, they remain.
+            - paragraph [ref=f2e128]: I don't have a clean answer to where all this lands. What I am fairly sure of is that copying our existing processes into an AI-assisted world without examining why they exist is probably not the right move.
+            - paragraph [ref=f2e129]: The workflow was designed for us. We are no longer the ones doing it. That seems worth thinking about.
+          - link "← The Craft Is Not the Tests" [ref=f2e131] [cursor=pointer]:
+            - /url: "#the-crafts-future"
+  - contentinfo [ref=f2e132]:
+    - generic [ref=f2e133]:
+      - navigation [ref=f2e135]:
+        - link "About" [ref=f2e136] [cursor=pointer]:
+          - /url: /#about
+        - link "Experience" [ref=f2e137] [cursor=pointer]:
+          - /url: /#experience
+        - link "Q&A" [ref=f2e138] [cursor=pointer]:
+          - /url: /qa/
+        - link "Blog" [ref=f2e139] [cursor=pointer]:
+          - /url: /blog/
+        - link "Projects" [ref=f2e140] [cursor=pointer]:
+          - /url: /#projects
+        - link "Skills" [ref=f2e141] [cursor=pointer]:
+          - /url: /#skills
+        - link "Contact" [ref=f2e142] [cursor=pointer]:
+          - /url: /#contact
+      - generic [ref=f2e143]: © 2026 Chris Bramley
+  - alert [ref=f2e144]
