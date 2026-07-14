@@ -101,7 +101,7 @@ self.__SERVER_FILES_MANIFEST={
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "/Users/chris",
+    "outputFileTracingRoot": "/Users/chris/Documents/Dev/new-personal-site",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -294,12 +294,12 @@ self.__SERVER_FILES_MANIFEST={
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.js",
     "turbopack": {
-      "root": "/Users/chris"
+      "root": "/Users/chris/Documents/Dev/new-personal-site"
     },
     "distDirRoot": ".next"
   },
   "appDir": "/Users/chris/Documents/Dev/new-personal-site",
-  "relativeAppDir": "Documents/Dev/new-personal-site",
+  "relativeAppDir": "",
   "files": [
     ".next/routes-manifest.json",
     ".next/server/pages-manifest.json",

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import React from "react"
 import "./globals.css"
+import RumInit from "@/components/RumInit"
 
 export const metadata: Metadata = {
   title: "Chris Bramley • Principal Test Engineer & Engineering Leader",
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-800 text-slate-100 antialiased">
+        <RumInit />
         {children}
       </body>
     </html>

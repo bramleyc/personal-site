@@ -1,0 +1,505 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_CLOUDWATCH",
+      "label": "CloudWatch",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "cloudwatch",
+      "pluginName": "CloudWatch"
+    }
+  ],
+  "title": "Personal Site",
+  "uid": "personal-site",
+  "timezone": "browser",
+  "editable": true,
+  "time": {
+    "from": "now-24h",
+    "to": "now"
+  },
+  "refresh": "5m",
+  "schemaVersion": 39,
+  "version": 1,
+  "panels": [
+    {
+      "type": "row",
+      "title": "Frontend (CloudWatch RUM)",
+      "collapsed": false,
+      "panels": [],
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "timeseries",
+      "title": "Page load time (navigation)",
+      "datasource": {
+        "type": "cloudwatch",
+        "uid": "${DS_CLOUDWATCH}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 1
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "showPoints": "always",
+            "pointSize": 6
+          },
+          "unit": "ms"
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "region": "eu-west-2",
+          "namespace": "AWS/RUM",
+          "metricName": "PerformanceNavigationDuration",
+          "statistic": "Average",
+          "dimensions": {
+            "application_name": "personal-site"
+          },
+          "period": "300",
+          "matchExact": false,
+          "label": "avg",
+          "queryMode": "Metrics",
+          "metricQueryType": 0,
+          "metricEditorMode": 0,
+          "expression": "",
+          "sqlExpression": "",
+          "id": "",
+          "hide": false
+        },
+        {
+          "refId": "B",
+          "region": "eu-west-2",
+          "namespace": "AWS/RUM",
+          "metricName": "PerformanceNavigationDuration",
+          "statistic": "p90",
+          "dimensions": {
+            "application_name": "personal-site"
+          },
+          "period": "300",
+          "matchExact": false,
+          "label": "p90",
+          "queryMode": "Metrics",
+          "metricQueryType": 0,
+          "metricEditorMode": 0,
+          "expression": "",
+          "sqlExpression": "",
+          "id": "",
+          "hide": false
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Largest Contentful Paint",
+      "datasource": {
+        "type": "cloudwatch",
+        "uid": "${DS_CLOUDWATCH}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 1
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "showPoints": "always",
+            "pointSize": 6
+          },
+          "unit": "ms",
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 2500
+              },
+              {
+                "color": "red",
+                "value": 4000
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "region": "eu-west-2",
+          "namespace": "AWS/RUM",
+          "metricName": "WebVitalsLargestContentfulPaint",
+          "statistic": "Average",
+          "dimensions": {
+            "application_name": "personal-site"
+          },
+          "period": "300",
+          "matchExact": false,
+          "label": "LCP avg",
+          "queryMode": "Metrics",
+          "metricQueryType": 0,
+          "metricEditorMode": 0,
+          "expression": "",
+          "sqlExpression": "",
+          "id": "",
+          "hide": false
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Interaction to Next Paint / Cumulative Layout Shift",
+      "datasource": {
+        "type": "cloudwatch",
+        "uid": "${DS_CLOUDWATCH}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 9
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "showPoints": "always",
+            "pointSize": 6
+          },
+          "unit": "ms"
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "CLS"
+            },
+            "properties": [
+              {
+                "id": "unit",
+                "value": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "region": "eu-west-2",
+          "namespace": "AWS/RUM",
+          "metricName": "WebVitalsInteractionToNextPaint",
+          "statistic": "Average",
+          "dimensions": {
+            "application_name": "personal-site"
+          },
+          "period": "300",
+          "matchExact": false,
+          "label": "INP",
+          "queryMode": "Metrics",
+          "metricQueryType": 0,
+          "metricEditorMode": 0,
+          "expression": "",
+          "sqlExpression": "",
+          "id": "",
+          "hide": false
+        },
+        {
+          "refId": "B",
+          "region": "eu-west-2",
+          "namespace": "AWS/RUM",
+          "metricName": "WebVitalsCumulativeLayoutShift",
+          "statistic": "Average",
+          "dimensions": {
+            "application_name": "personal-site"
+          },
+          "period": "300",
+          "matchExact": false,
+          "label": "CLS",
+          "queryMode": "Metrics",
+          "metricQueryType": 0,
+          "metricEditorMode": 0,
+          "expression": "",
+          "sqlExpression": "",
+          "id": "",
+          "hide": false
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Sessions, page views, and errors",
+      "datasource": {
+        "type": "cloudwatch",
+        "uid": "${DS_CLOUDWATCH}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 9
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "showPoints": "always",
+            "pointSize": 6
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "region": "eu-west-2",
+          "namespace": "AWS/RUM",
+          "metricName": "SessionCount",
+          "statistic": "Sum",
+          "dimensions": {
+            "application_name": "personal-site"
+          },
+          "period": "3600",
+          "matchExact": false,
+          "label": "sessions",
+          "queryMode": "Metrics",
+          "metricQueryType": 0,
+          "metricEditorMode": 0,
+          "expression": "",
+          "sqlExpression": "",
+          "id": "",
+          "hide": false
+        },
+        {
+          "refId": "B",
+          "region": "eu-west-2",
+          "namespace": "AWS/RUM",
+          "metricName": "PageViewCount",
+          "statistic": "Sum",
+          "dimensions": {
+            "application_name": "personal-site"
+          },
+          "period": "3600",
+          "matchExact": false,
+          "label": "page views",
+          "queryMode": "Metrics",
+          "metricQueryType": 0,
+          "metricEditorMode": 0,
+          "expression": "",
+          "sqlExpression": "",
+          "id": "",
+          "hide": false
+        },
+        {
+          "refId": "C",
+          "region": "eu-west-2",
+          "namespace": "AWS/RUM",
+          "metricName": "JsErrorCount",
+          "statistic": "Sum",
+          "dimensions": {
+            "application_name": "personal-site"
+          },
+          "period": "3600",
+          "matchExact": false,
+          "label": "JS errors",
+          "queryMode": "Metrics",
+          "metricQueryType": 0,
+          "metricEditorMode": 0,
+          "expression": "",
+          "sqlExpression": "",
+          "id": "",
+          "hide": false
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "title": "Delivery (CloudFront)",
+      "collapsed": false,
+      "panels": [],
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 17
+      }
+    },
+    {
+      "type": "timeseries",
+      "title": "Requests",
+      "datasource": {
+        "type": "cloudwatch",
+        "uid": "${DS_CLOUDWATCH}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 18
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "showPoints": "always",
+            "pointSize": 6
+          },
+          "unit": "short"
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "region": "us-east-1",
+          "namespace": "AWS/CloudFront",
+          "metricName": "Requests",
+          "statistic": "Sum",
+          "dimensions": {
+            "DistributionId": "E1KWSBWIUHBFAM",
+            "Region": "Global"
+          },
+          "period": "3600",
+          "matchExact": true,
+          "label": "requests",
+          "queryMode": "Metrics",
+          "metricQueryType": 0,
+          "metricEditorMode": 0,
+          "expression": "",
+          "sqlExpression": "",
+          "id": "",
+          "hide": false
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Error rates",
+      "datasource": {
+        "type": "cloudwatch",
+        "uid": "${DS_CLOUDWATCH}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 18
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "showPoints": "always",
+            "pointSize": 6
+          },
+          "unit": "percent"
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "region": "us-east-1",
+          "namespace": "AWS/CloudFront",
+          "metricName": "4xxErrorRate",
+          "statistic": "Average",
+          "dimensions": {
+            "DistributionId": "E1KWSBWIUHBFAM",
+            "Region": "Global"
+          },
+          "period": "300",
+          "matchExact": true,
+          "label": "4xx %",
+          "queryMode": "Metrics",
+          "metricQueryType": 0,
+          "metricEditorMode": 0,
+          "expression": "",
+          "sqlExpression": "",
+          "id": "",
+          "hide": false
+        },
+        {
+          "refId": "B",
+          "region": "us-east-1",
+          "namespace": "AWS/CloudFront",
+          "metricName": "5xxErrorRate",
+          "statistic": "Average",
+          "dimensions": {
+            "DistributionId": "E1KWSBWIUHBFAM",
+            "Region": "Global"
+          },
+          "period": "300",
+          "matchExact": true,
+          "label": "5xx %",
+          "queryMode": "Metrics",
+          "metricQueryType": 0,
+          "metricEditorMode": 0,
+          "expression": "",
+          "sqlExpression": "",
+          "id": "",
+          "hide": false
+        }
+      ]
+    },
+    {
+      "type": "timeseries",
+      "title": "Bytes downloaded",
+      "datasource": {
+        "type": "cloudwatch",
+        "uid": "${DS_CLOUDWATCH}"
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 26
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "showPoints": "always",
+            "pointSize": 6
+          },
+          "unit": "bytes"
+        },
+        "overrides": []
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "region": "us-east-1",
+          "namespace": "AWS/CloudFront",
+          "metricName": "BytesDownloaded",
+          "statistic": "Sum",
+          "dimensions": {
+            "DistributionId": "E1KWSBWIUHBFAM",
+            "Region": "Global"
+          },
+          "period": "3600",
+          "matchExact": true,
+          "label": "bytes",
+          "queryMode": "Metrics",
+          "metricQueryType": 0,
+          "metricEditorMode": 0,
+          "expression": "",
+          "sqlExpression": "",
+          "id": "",
+          "hide": false
+        }
+      ]
+    }
+  ]
+}

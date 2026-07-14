@@ -70,5 +70,12 @@ For a full breakdown of tooling, coverage, expectations of contributors and futu
 ## Deployment
 Github Actions have been configured in the repository to run the tests, create the static build if the tests pass, and upload it to s3 after every commit is pushed. The steps are in `.github/workflows/ci-and-deploy.yml`.
 
+## Monitoring
+Real-user monitoring uses **AWS CloudWatch RUM**: page load times, Core Web Vitals, and JS errors from real visitors. The client (`src/lib/rum.ts`, mounted via `src/components/RumInit.tsx` in the root layout) only activates when the `NEXT_PUBLIC_RUM_*` values in `.env.production` are present at build time — local dev and tests are unaffected. Those values are public identifiers (they ship in the JS bundle), not secrets. `NEXT_PUBLIC_RUM_SAMPLE_RATE` (0–1) controls the fraction of sessions recorded; lower it if traffic makes RUM event costs noticeable ($1 per 100k events).
+
+The AWS resources (app monitor, Cognito identity pool, IAM role) were created by `scripts/aws-rum-setup.sh` (one-off).
+
+`scripts/grafana-dashboard.json` is a Grafana dashboard combining the RUM metrics with CloudFront delivery metrics (requests, 4xx/5xx error rates, bytes). Import it into a Grafana instance with a CloudWatch data source (the CloudFront queries target `us-east-1`, where CloudFront publishes metrics; RUM metrics are in `eu-west-2`).
+
 ## License
 MIT Licence.
